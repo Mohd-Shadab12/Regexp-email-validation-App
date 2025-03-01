@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Matcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Regex & Email Validator</h1>
+
+    <div class="container">
+        <!-- 🔍 Regex Matcher Form -->
+        <div class="box">
+            <h2>Regex Matcher</h2>
+            <form action="/results" method="post">
+                <label>Test String:</label>
+                <input type="text" name="test_string" required>
+                <br>
+                <label>Regex Pattern:</label>
+                <input type="text" name="regex_pattern" required>
+                <br>
+                <button type="submit">Find Matches</button>
+            </form>
+
+            {% if matches is not none %}
+                <h3>Matches Found:</h3>
+                <ul>
+                    {% for match in matches %}
+                        <li>{{ match }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <!-- ✉️ Email Validator Form -->
+        <div class="box">
+            <h2>Email Validator</h2>
+            <form action="/validate_email" method="post">
+                <label>Email:</label>
+                <input type="text" name="email" required>
+                <br>
+                <button type="submit">Validate Email</button>
+            </form>
+
+            {% if email is not none %}
+                <h3>Email: {{ email }}</h3>
+                <p class="result {% if is_valid %}valid{% else %}invalid{% endif %}">
+                    {{ "✅ Valid Email" if is_valid else "❌ Invalid Email" }}
+                </p>
+            {% endif %}
+
+        </div>
+    </div>
+</body>
+</html>
