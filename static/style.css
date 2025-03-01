@@ -1,0 +1,121 @@
+/* 🌈 Background Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    padding: 20px;
+}
+
+/* 🔥 Headings Styling */
+h1 {
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+/* 📜 Form Container (Side-by-Side) */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 📦 Box Design */
+.box {
+    background: #dfe6e9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* ✏️ Input Fields */
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ff758c;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    background: #dcdde1;
+    color: #2d3436;
+}
+
+input:focus {
+    border-color: #ff416c;
+    background: #c8d6e5;
+    color: black;
+}
+
+/* 🎨 Stylish Buttons */
+button {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    transform: translateY(-2px);
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* 📜 Matched Results List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #b2bec3;
+    padding: 12px;
+    margin: 8px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    color: #2d3436;
+}
+
+/* ✅ Email Validation Result */
+.result {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.valid {
+    color: #2ecc71;
+    background: rgba(46, 204, 113, 0.2);
+}
+
+.invalid {
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.2);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+    }
+}
